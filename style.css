@@ -1,0 +1,189 @@
+*{
+    padding: 0;
+    margin: 0;
+   
+}
+:root{
+  --container-w: 1200px;      /* 你原本也有用到這個 */
+  --line: #cfcfcf;
+  --circle: #666;
+  --active: #2b6cb0;
+  --shadow: rgba(0,0,0,.18);
+  --design-w: 1200px;   /* 你的版心寬度，等於 --container-w */
+  --design-h: 2400px;   /* 頁面設計高度，依實際內容調整 */
+}
+
+header{
+background-color: #d6ccc2;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom: 3px outset #bba; /* 下邊界效果可自行調整 */
+  z-index: 100;
+  
+}
+
+h1 {
+    color: rgb(39, 10, 10);
+    position: absolute;
+    left: -120px;
+    top: 0;
+    line-height: 80px;
+    background-image: url(images/圖片1.png);
+    margin: 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 250px auto;  /* ✅ 固定寬度 320px，不會因畫面縮小改變 */
+    width: 600px;                 /* 保留原本的標題範圍 */
+    height: 80px;                 /* ✅ 明確給高度，讓背景不被壓扁 */
+    text-indent: -999px;
+}
+
+.float-nav-outer {
+    background-color:#d6ccc2;
+    overflow:  hidden;
+  }
+.inline-block-nav {
+    display: flex;
+    line-height: 80px;
+    justify-content: center;
+    color:rgba(215, 35, 35, 0.845);
+    font-size: 0;
+    text-align: center;
+    font-family: "標楷體";
+    float: center;
+  }
+  .inline-block-nav > li {
+    
+        float: left;
+        position: relative;
+        left: 30%; /* left: -50% 也有同樣效果 */
+      
+  }
+ 
+
+header nav a {
+    color: inherit; /* 移除超連結顏色 */
+    font-size: 1.3rem;
+    padding: 20px;
+    text-decoration: none; /* 移除超連結底線 */
+  }
+
+  header  nav > ul {
+    background-color:#d6ccc2;
+    list-style: none; /* 移除項目符號 */
+    margin: 0;
+    padding: 0;
+  }
+  /* 滑鼠移到 `<a>` 時變成深底淺色 */
+  header nav a:hover {
+    background-color: rgb(115, 115, 115);
+    color: white;
+  }
+ 
+
+.open{
+    display: flex;
+    font-family:  "Segoe Print","文鼎粗毛楷"; 
+    overflow: hidden;
+    color: #373F47;
+}
+
+.open img{
+    width: 50%;
+    overflow:  hidden; 
+}
+.info{
+    width: 50%;
+    background-color:rgba(255, 228, 181, 0.697);
+    display: flex;
+    flex-direction: column; /*主軸就會充當垂直、而切軸則充當水平*/
+    align-items: center; /*對齊交錯軸線中央*/
+    justify-content: center;
+}
+.info h2{
+    font-size:60px;
+    margin-bottom: 100px;
+}
+.info p{
+    text-align: center;
+    line-height: 1.5em;
+    color: peru;
+    font-size:30px;
+    margin-bottom: 100px;
+}
+
+.info input{
+    color: tan;
+    border: 3px solid tan;
+    background-color: antiquewhite;
+    text-decoration: none;
+    font-size:20px;
+    font-family: "標楷體";
+    border-radius: 5px;
+    padding: 7px 15px;
+    font-weight: 400;
+}
+.info input:hover{
+    color:#003C9D;
+    background-color:#fff;
+    border:2px #003C9D solid;
+  }
+
+.news{
+    background-color: antiquewhite;
+    color: honeydew;
+    height:95vh;
+    background-image: url(images/IMG_4058.jpg) ;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+.font1{
+    font-family:  "Times New Roman","文鼎細鋼筆行楷";
+    letter-spacing: 3px;
+    color: #373F47;
+    font-size: 90px;
+    font-weight: bold;
+}
+
+
+
+
+footer{
+    background-color: #d6ccc2 ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family:  "Times New Roman","標楷體";
+    letter-spacing: 3px;
+}
+.end{
+    font-family:  "Times New Roman","標楷體";
+    display: flex;
+    justify-content: center ;
+    background-color: bisque;
+    line-height:  10px; 
+    padding: 20px ;
+    
+}
+.end p{
+    padding: 1px 10px  ;
+}
+
+html, body {
+  min-width: 1600px;     /* 固定版面寬度 */
+  overflow-x: auto;       /* 小螢幕時允許水平滾動 */
+  overflow-y: auto;       /* ✅ 加入這行：允許上下滾動 */
+  height: auto;           /* 讓內容高度自動撐開 */
+}
